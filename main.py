@@ -49,10 +49,16 @@ def decode(frame):
 def display(frame, decoded_objs):
     for decoded_obj in decoded_objs:
         left, top, width, height = decoded_obj.rect
-        frame = cv2.rectangle(frame,
-			      (left, top),
-			      (left + width, height + top),
-			      (0, 255, 0), 2)
+       # frame = cv2.rectangle(frame,
+       #		      (left, top),
+       #		      (left + width, height + top),
+       #		      (0, 255, 0), 2)
+	
+	frame = cv2.rectangle(frame,
+                      (left, top),
+		      (left + width, height + top),
+		      (255, 0, 0), 2) # 青色に変更
+
 
     return frame
     
